@@ -1,5 +1,7 @@
 /* Sheila Dimitriadis */
 
+@import url(https://fonts.google.com/share?selection.family=Molle:ital@1|Montserrat);
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -353,3 +355,442 @@ template {
 }
 
 /* End of CSS Resets */
+
+:root {
+  font-size: 16px;
+  --fonts: Montserrat, sans-serif;
+  --yellow: #f6d64a;
+  --teal: #55bcd5;
+  --purple: #9b26b0;
+  --blue: #499bd2;
+  --dark-gray: #222222;
+  --light-gray: #eaeaea;
+  --white: #ffffff;
+  --black: #000000;
+
+  --heading-font: "Molle";
+  --body-font: "Montserrat", sans-serif;
+  --bold: 700;
+  --semi-bold: 600;
+}
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+body {
+  color: var(--black);
+  line-height: 1.5em;
+  width: 100%;
+}
+
+/* Character Styles */
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+}
+
+h4,
+p,
+q,
+small,
+nav,
+button,
+form {
+  font-family: var(--body-font);
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2.5rem 0 0;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 40px;
+  margin: 0.5rem 0.5rem 2rem;
+}
+
+h4 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+p,
+q,
+nav,
+a,
+form {
+  font-size: 20px;
+}
+
+/* Header Styles */
+
+header {
+  background-image: linear-gradient(var(--teal), var(--white));
+  padding: 0 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+header img {
+  margin-top: 0.5rem;
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#logo {
+  padding: 0;
+}
+
+a {
+  display: block;
+  padding: 1rem;
+  color: var(--black);
+}
+
+#menu-toggle {
+  position: absolute;
+  padding: 1.5rem 0;
+  top: 0;
+  right: 0;
+}
+
+#menu-toggle label {
+  display: block;
+  padding: 0.5rem 4.5rem;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: var(--semi-bold);
+  background: var(--yellow);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked ~ ul {
+  display: block;
+  background-color: var(--teal);
+}
+
+#toggle:checked + label {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+ul {
+  display: none;
+}
+
+ul li {
+  border-bottom: 1px solid var(--black);
+}
+
+ul li a {
+  display: block;
+  color: var(--black);
+  font-weight: var(--semi-bold);
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul li a:hover {
+  background-color: var(--yellow);
+}
+
+/* Main Content Styles */
+
+#intro h2 {
+  padding-bottom: 1rem;
+}
+
+#intro p {
+  line-height: 1.75;
+  padding-bottom: 1rem;
+}
+
+#intro h2,
+#intro p {
+  margin: 0 2rem;
+}
+
+#img-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+#img-grid img {
+  width: 100%;
+}
+
+#plan {
+  margin-top: 1rem;
+  padding: 1rem 2rem 1.5rem;
+  background-color: var(--yellow);
+}
+
+#plan div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+#plan h4 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#plan section {
+  background-color: var(--teal);
+  border: 4px solid var(--white);
+  border-radius: 8px;
+}
+
+#plan a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 2rem;
+}
+
+#testimonials {
+  padding: 3rem 2rem 1.5rem;
+}
+
+#testimonials div {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+#testimonials div section {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+}
+
+#testimonials section {
+  text-align: center;
+}
+
+#testimonials h4 {
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+#testimonials p {
+  margin: 0;
+}
+
+#testimonials q {
+  font-style: italic;
+}
+
+#about {
+  background-color: var(--blue);
+}
+
+#about h3 {
+  line-height: 3rem;
+  padding: 2rem 2rem 0;
+}
+
+#about div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#about section {
+  text-align: center;
+  height: min-content;
+}
+
+#contact {
+  padding: 2em;
+}
+
+.form-required {
+  font-size: 1rem;
+}
+
+form label {
+  font-weight: var(--semi-bold);
+}
+
+.required {
+  color: var(--purple);
+}
+
+form input {
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  border: 3px solid var(--purple);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+form label {
+  text-transform: uppercase;
+}
+
+.radio-label {
+  font-weight: 400;
+}
+
+input[type="radio"] {
+  display: grid;
+  appearance: none;
+  background-color: var(--white);
+  margin: 0;
+  width: 3em;
+  height: 3em;
+  border: 0.2em solid var(--purple);
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="radio"]::before {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  content: "";
+  background-color: var(--purple);
+  transform: scale(0);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+fieldset {
+  border: none;
+  padding: 0.5rem 0;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.custom-select {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  border: 3px solid var(--purple);
+  cursor: pointer;
+  background-color: var(--white);
+  padding: 1.5rem 1rem;
+}
+
+.custom-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 3em;
+  height: 1em;
+  background-color: var(--purple);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.custom-select select {
+  width: 100%;
+  height: 100%;
+  padding-right: 2em;
+  box-sizing: border-box;
+}
+
+.custom-select {
+  margin-bottom: 1.5rem;
+}
+
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  outline: none;
+  line-height: inherit;
+}
+
+#mySubmit {
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  color: var(--white);
+  background-color: var(--purple);
+  font-weight: var(--bold);
+  text-transform: uppercase;
+}
+
+#mySubmit:hover {
+  color: var(--purple);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--light-gray);
+  padding: 0.5rem 0 1rem;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 0.7rem;
+}
+
+footer p {
+  padding-bottom: 1rem;
+}
