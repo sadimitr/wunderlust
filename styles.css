@@ -793,8 +793,84 @@ ul li a:hover {
 }
 
 @media (min-width: 768px) {
+  header {
+    display: grid;
+    grid-template-areas:
+      "logo header"
+      "logo text"
+      "nav nav";
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  header img {
+    max-width: none;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  header a {
+    grid-area: logo;
+  }
+
+  header h1 {
+    grid-area: header;
+    color: var(--blue);
+    margin: 2.5rem 0 1rem;
+  }
+
+  header p {
+    grid-area: text;
+    width: 90%;
+  }
+
+  header nav {
+    grid-area: nav;
+    width: 90%;
+    justify-self: center;
+  }
+
+  #menu-toggle {
+    padding: 0;
+    position: relative;
+  }
+
+  #menu-toggle label {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  ul li {
+    width: 100%;
+    background-color: var(--white);
+    border: none;
+  }
+
+  ul li a:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+  }
+
+  .active {
+    background-color: var(--yellow);
+  }
+
   #intro {
     padding: 0 5rem;
+  }
+
+  #intro h2 {
+    margin-bottom: 0;
+  }
+
+  #intro p {
+    margin: 0;
+    padding: 0;
   }
 
   #img-grid {
@@ -846,8 +922,8 @@ ul li a:hover {
   }
 
   #about img {
-    max-width: 60%;
     height: auto;
+    max-width: 60%;
   }
 
   #contact {
@@ -863,6 +939,10 @@ ul li a:hover {
     padding-right: 2rem;
   }
 
+  .radio-input {
+    height: 80px;
+  }
+
   form {
     position: relative;
   }
@@ -871,8 +951,14 @@ ul li a:hover {
     font-weight: var(--bold);
   }
 
+  #selects {
+    display: flex;
+    flex-direction: column;
+  }
+
   #mySubmit {
-    right: 1rem;
+    width: 40%;
+    align-self: flex-end;
   }
 
   footer {
