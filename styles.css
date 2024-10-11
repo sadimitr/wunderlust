@@ -549,11 +549,6 @@ ul li a:hover {
     padding-bottom: 1rem;
   }
 
-  #intro h2,
-  #intro p {
-    margin: 0 2rem;
-  }
-
   #img-grid {
     display: grid;
     gap: 1rem;
@@ -798,6 +793,81 @@ ul li a:hover {
 }
 
 @media (min-width: 768px) {
+  #plan {
+    padding: 2.5rem 5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  #plan div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  #testimonials {
+    padding: 3rem 5rem 1.5rem;
+  }
+
+  #testimonials div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+  }
+
+  #about {
+    padding: 0 5rem;
+  }
+
+  #about div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #about img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  #contact {
+    padding: 5rem 5rem 2rem;
+  }
+
+  fieldset {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .radio-control {
+    padding-right: 2rem;
+  }
+
+  form {
+    position: relative;
+  }
+
+  legend {
+    font-weight: var(--bold);
+  }
+
+  #mySubmit {
+    right: 1rem;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+  }
+
+  footer p {
+    padding: 0.7rem;
+  }
 }
 
 @media (min-width: 1024px) {
