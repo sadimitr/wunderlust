@@ -802,14 +802,13 @@ ul li a:hover {
       "logo header"
       "logo text"
       "nav nav";
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0fr 2fr;
     align-items: center;
     padding: 2rem;
   }
 
   header img {
     max-width: none;
-    width: 100%;
     margin-bottom: 3rem;
   }
 
@@ -820,7 +819,6 @@ ul li a:hover {
   header h1 {
     grid-area: header;
     color: var(--blue);
-    margin: 2.5rem 0 1rem;
   }
 
   header p {
@@ -830,7 +828,7 @@ ul li a:hover {
 
   header nav {
     grid-area: nav;
-    width: 90%;
+    width: 93%;
     justify-self: center;
   }
 
@@ -869,6 +867,7 @@ ul li a:hover {
 
   #intro h2 {
     margin-bottom: 0;
+    padding: 2rem 0 1rem;
   }
 
   #intro p {
