@@ -1057,6 +1057,10 @@ ul li a:hover {
     gap: 1rem;
   }
 
+  #intro h2 {
+    padding: 0;
+  }
+
   #intro p {
     grid-row: 2 / span 1;
   }
