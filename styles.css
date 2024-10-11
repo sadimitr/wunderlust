@@ -542,11 +542,13 @@ ul li a:hover {
 @media (min-width: 320px) {
   #intro h2 {
     padding-bottom: 1rem;
+    padding: 0 2rem;
+    margin: 0;
   }
 
   #intro p {
     line-height: 1.75;
-    padding-bottom: 1rem;
+    padding: 0 2rem;
   }
 
   #img-grid {
@@ -973,5 +975,136 @@ ul li a:hover {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1920px) {
+  header {
+    display: grid;
+    grid-template-areas:
+      "nav nav"
+      "logo header"
+      "logo text";
+    grid-template-columns: 0fr 2fr;
+    align-items: center;
+    padding: 0;
+  }
+
+  header img {
+    max-width: none;
+    width: auto;
+    margin-bottom: 0;
+    height: 150px;
+  }
+
+  header a {
+    grid-area: logo;
+  }
+
+  header h1 {
+    grid-area: header;
+    margin: 2.5rem 0 1rem;
+    color: inherit;
+  }
+
+  header p {
+    grid-area: text;
+    width: 90%;
+    margin: 0;
+  }
+
+  header nav {
+    justify-self: right;
+    grid-area: nav;
+    width: fit-content;
+  }
+
+  #menu-toggle {
+    padding: 0;
+    position: relative;
+  }
+
+  #menu-toggle label {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 0.5rem;
+    height: 50px;
+  }
+
+  ul li {
+    background-color: var(--white);
+    border: none;
+    width: 120px;
+    height: fit-content;
+  }
+
+  ul li a {
+    padding: 0.2rem;
+  }
+
+  ul li a:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+  }
+
+  #intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 7rem 9rem 5rem;
+    gap: 1rem;
+  }
+
+  #intro p {
+    grid-row: 2 / span 1;
+  }
+
+  #img-grid {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 2;
+    gap: 1rem;
+  }
+
+  #plan {
+    padding: 7rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  #plan div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+  }
+
+  #testimonials {
+    padding: 7rem;
+  }
+
+  #testimonials div {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+
+  #about {
+    padding: 5rem 7rem;
+  }
+
+  #contact form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 3fr 0.6fr 0.6fr;
+    justify-items: start;
+    align-items: center;
+    padding: 1rem 5rem;
+  }
 }
