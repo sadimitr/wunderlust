@@ -538,8 +538,8 @@ ul li a:hover {
 }
 
 /* Main Content Styles */
-
-@media (min-width: 320px) {
+/* iPhone 14 Pro Max */
+@media (min-width: 430px) {
   #intro h2 {
     padding-bottom: 1rem;
     padding: 0 2rem;
@@ -794,6 +794,7 @@ ul li a:hover {
   }
 }
 
+/* iPad */
 @media (min-width: 768px) {
   header {
     display: grid;
@@ -975,6 +976,7 @@ ul li a:hover {
   }
 }
 
+/* Web */
 @media (min-width: 1920px) {
   header {
     display: grid;
